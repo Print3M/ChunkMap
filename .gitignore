@@ -1,4 +1,9 @@
 *.pyc
 env/
-*.txt
-*.json
+
+# Useful test files
+hosts.txt
+out.txt
+output.txt
+out.json
+output.json
