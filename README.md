@@ -6,7 +6,7 @@
   - [1.3. Usage](#13-usage)
     - [1.3.1. New scan](#131-new-scan)
     - [1.3.2. Chunking](#132-chunking)
-    - [1.3.3. Resume scan](#133-resume-scan)
+    - [1.3.3. Interrupt and resume scan](#133-interrupt-and-resume-scan)
     - [1.3.4. Extra Nmap parameters](#134-extra-nmap-parameters)
     - [1.3.5. Scan range](#135-scan-range)
 
@@ -49,7 +49,9 @@ The fundamental feature of ChunkMap tool is dividing a standard nmap scan into c
 chunkmap.py out.json --hosts hosts.txt -c 1000
 ```
 
-### 1.3.3. Resume scan
+### 1.3.3. Interrupt and resume scan
+
+To interrupt currently executed scan use `ctrl + c` shortcut. You can choose if you want to skip this host (mark it as COMPLETED) or resume it later (mark it as IN_PROGRESS).
 
 To resume an previously interrupted scan use `--resume <output-file>` parameter. The file provided to the parameter should be in format of an ChunkMap output file. Note that every resume can be actually performed using different parameters if needed.
 
